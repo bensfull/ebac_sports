@@ -6,7 +6,7 @@ interface Jogo {
   nome: string
   descricao: string
   preco: number
-  imagem:string
+  imagem: string
 }
 
 const api = createApi({
@@ -23,5 +23,3 @@ const api = createApi({
 
 export const { useGetJogosQuery } = api
 export default api
-
-
