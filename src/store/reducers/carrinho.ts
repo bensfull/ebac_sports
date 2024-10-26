@@ -19,7 +19,7 @@ const initialState: CarrinhoState = {
           alert('Item já adicionado')
         }else {
             state. itens.push(jogo)
-        }
+        } 
       }
     }
 })

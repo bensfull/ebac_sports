@@ -13,7 +13,7 @@ type Props = {
 }
 
 const Header = ({ favoritos }: Props) => {
-  const itens = useSelector((state:RootReducer) => state.carrinho.itens)
+  const itens = useSelector((state: RootReducer) => state.carrinho.itens)
 
   const valorTotal = itens.reduce((acc, item) => {
     acc += item.preco

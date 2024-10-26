@@ -1,15 +1,27 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { Produto } from '../App'
+
+// Defina o tipo dos dados que serão retornados, por exemplo:
+interface Jogo {
+  id: number
+  nome: string
+  descricao: string
+  preco: number
+  imagem:string
+}
+
 const api = createApi({
-baseQuery: fetchBaseQuery({
-baseUrl: 'http://localhost:4000'
-}),
-endpoints: (builder) => ({
-getJogos: builder.query<Produto [], void> ({
-query: () => 'produtos'
+  reducerPath: 'api', // Defina um caminho para o reducer
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'https://fake-api-tau.vercel.app/api/ebac_sports'
+  }),
+  endpoints: (builder) => ({
+    getJogos: builder.query<Jogo[], void>({
+      query: () => ''
+    })
+  })
 })
-})
-})
+
 export const { useGetJogosQuery } = api
 export default api
+
 
